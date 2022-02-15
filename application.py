@@ -3,18 +3,18 @@ application = Flask(__name__)
 
 @application.route('/')
 def hello_world():
-    return  'Hello'#render_template('frontpage.html')
+    return  render_template('frontpage.html')
 
-#
-# @application.route("/information")
-# def info():
-#     return render_template("information.html")
-#
-#
-#
-# @application.route("/reviews")
-# def review():
-#     return render_template("reviews.html")
+
+@application.route("/information")
+def info():
+    return render_template("information.html")
+
+
+
+@application.route("/reviews")
+def review():
+    return render_template("reviews.html")
 
 
 if __name__ == "__main__":
